@@ -1,0 +1,1 @@
+# IVO Landing Pages\n\nAuto-generated landing pages for audit clients.\n\n## Structure\n\n```\nlanding-pages/\n  ├── {respondent_id}/\n  │   └── index.html\n  ├── assets/\n  │   ├── style.css\n  │   └── script.js\n  └── README.md\n```\n\n## Deployment\n\nEach page auto-publishes to Cloudflare Pages on commit.
