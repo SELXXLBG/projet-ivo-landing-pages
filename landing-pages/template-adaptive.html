@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{preferred_language}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{seo_meta.title}}</title>
+  <meta name="description" content="{{seo_meta.description}}">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/adaptive.css">
+  <style>
+    :root {
+      --theme-primary: {{theme_primary}};
+      --theme-accent: {{theme_accent}};
+      --theme-secondary: {{theme_secondary}};
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero" data-industry="{{industry}}">
+  <div class="container">
+    <h1 class="hero-headline">{{hero_section.headline}}</h1>
+    <p class="hero-subheadline">{{hero_section.sub_headline}}</p>
+    {{#if hero_section.above_fold_bullets}}<ul class="hero-benefits">{{#each hero_section.above_fold_bullets}}<li>✓ {{this}}</li>{{/each}}</ul>{{/if}}
+    <div class="hero-actions"><a href="#cta" class="cta-button primary large">{{hero_section.hero_cta}}</a></div>
+    {{#if hero_section.hero_supporting_text}}<p class="hero-support">{{hero_section.hero_supporting_text}}</p>{{/if}}
+  </div>
+</section>
+
+<section class="problem-section">
+  <div class="container">
+    <div class="section-header"><h2>{{problem_section.headline}}</h2></div>
+    <p>{{problem_section.body}}</p>
+  </div>
+</section>
+
+<section class="solution-section">
+  <div class="container">
+    <div class="section-header"><h2>{{solution_section.headline}}</h2></div>
+    <p class="solution-intro">{{solution_section.body}}</p>
+    {{#if solution_section.benefits}}<div class="benefits-grid">{{#each solution_section.benefits}}<div class="benefit-card"><div class="benefit-icon">{{icon}}</div><h3>{{title}}</h3><p>{{description}}</p></div>{{/each}}</div>{{/if}}
+  </div>
+</section>
+
+<section class="proof-section">
+  <div class="container">
+    <div class="section-header"><h2>{{social_proof_section.headline}}</h2></div>
+    {{#if social_proof_section.testimonials}}<div class="testimonials-carousel">{{#each social_proof_section.testimonials}}<div class="testimonial-card"><div class="testimonial-quote">"{{quote}}"</div><div class="testimonial-meta"><div class="testimonial-author">{{name}}</div><div class="testimonial-result">{{result}}</div></div></div>{{/each}}</div>{{/if}}
+    {{#if social_proof_section.trust_badges}}<div class="trust-section"><p class="trust-label">Trusted by:</p><div class="trust-badges">{{#each social_proof_section.trust_badges}}<span class="badge">{{this}}</span>{{/each}}</div></div>{{/if}}
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header"><h2>{{faq_section.headline}}</h2></div>
+    {{#if faq_section.faqs}}<div class="faq-list">{{#each faq_section.faqs}}<div class="faq-item"><button class="faq-question" onclick="this.parentElement.classList.toggle('open')"><span>{{question}}</span><span class="faq-toggle">+</span></button><div class="faq-answer"><p>{{answer}}</p></div></div>{{/each}}</div>{{/if}}
+  </div>
+</section>
+
+<section class="cta-section" id="cta">
+  <div class="container">
+    <h2>{{final_cta_section.headline}}</h2>
+    <p class="cta-body">{{final_cta_section.body}}</p>
+    <a href="#" class="cta-button primary large">{{final_cta_section.cta_button}}</a>
+    {{#if final_cta_section.guarantee_text}}<div class="guarantee-box"><p>{{final_cta_section.guarantee_text}}</p></div>{{/if}}
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 <strong>{{business_name}}</strong>. All rights reserved.</p>
+    <p><small>Custom landing page by <strong>IVO</strong></small></p>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

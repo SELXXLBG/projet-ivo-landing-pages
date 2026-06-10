@@ -1,0 +1,65 @@
+/* Industry-Specific Themes */
+.hero[data-industry*="tech"],
+.hero[data-industry*="it"] {
+  --theme-primary: #0f1419;
+  --theme-accent: #00d9ff;
+  --theme-secondary: #1e3a5f;
+  background: linear-gradient(90deg, #0f1419 0%, #1e3a8a 100%);
+}
+
+.hero[data-industry*="ecommerce"],
+.hero[data-industry*="retail"],
+.hero[data-industry*="shop"] {
+  --theme-primary: #c41e3a;
+  --theme-accent: #ffd700;
+  --theme-secondary: #f5f5f5;
+  background: linear-gradient(135deg, #c41e3a 0%, #e74c3c 100%);
+}
+
+.hero[data-industry*="coach"],
+.hero[data-industry*="consult"] {
+  --theme-primary: #2c3e50;
+  --theme-accent: #e74c3c;
+  --theme-secondary: #ecf0f1;
+  background: linear-gradient(to bottom, #2c3e50 0%, #34495e 100%);
+}
+
+.hero[data-industry*="saas"],
+.hero[data-industry*="app"],
+.hero[data-industry*="platform"] {
+  --theme-primary: #1a1f36;
+  --theme-accent: #5e72e4;
+  --theme-secondary: #fff;
+  background: linear-gradient(135deg, #1a1f36 0%, #5e72e4 100%);
+}
+
+.hero[data-industry*="service"],
+.hero[data-industry*="professional"] {
+  --theme-primary: #34495e;
+  --theme-accent: #27ae60;
+  --theme-secondary: #f8f9fa;
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+}
+
+.hero[data-industry*="marketing"],
+.hero[data-industry*="creative"],
+.hero[data-industry*="agency"] {
+  --theme-primary: #1d1d1d;
+  --theme-accent: #ff006e;
+  --theme-secondary: #f0f0f0;
+  background: #1d1d1d;
+  border-top: 5px solid #ff006e;
+}
+
+.hero {
+  --theme-primary: #1a472a;
+  --theme-accent: #2ecc71;
+  --theme-secondary: #f8f9fa;
+}
+
+.problem-section { background: #f9f9f9; }
+.problem-section p { font-size: 1.05rem; line-height: 1.8; max-width: 900px; margin: 0 auto; color: #555; }
+.solution-section { background: white; }
+.solution-intro { font-size: 1.05rem; max-width: 900px; margin: 0 auto 40px; line-height: 1.8; color: #666; }
+.proof-section { background: #f9f9f9; }
+.faq-section { background: white; }
