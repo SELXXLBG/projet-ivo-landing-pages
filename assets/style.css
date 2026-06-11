@@ -1,3 +1,11 @@
+:root {
+  --theme-primary: #1a2332;
+  --theme-accent: #27ae60;
+  --theme-secondary: #243342;
+  --primary: var(--theme-primary);
+  --secondary: var(--theme-secondary);
+  --accent: var(--theme-accent);
+}
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #fff; }
@@ -8,45 +16,45 @@ p { margin-bottom: 1rem; }
 section { padding: 80px 0; } section:nth-child(even) { background: #f9f9f9; }
 .section-header { margin-bottom: 50px; text-align: center; }
 .section-header h2 { display: inline-block; position: relative; padding-bottom: 15px; }
-.section-header h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 3px; background: var(--accent); }
+.section-header h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 3px; background: var(--theme-accent); }
 .hero { color: white; padding: 120px 0; text-align: center; position: relative; overflow: hidden; }
 .hero-headline { font-size: clamp(1.8rem, 5vw, 3.5rem); margin-bottom: 20px; font-weight: 900; line-height: 1.2; }
 .hero-subheadline { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.95; line-height: 1.8; }
 .hero-benefits { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; justify-content: center; margin: 30px 0; }
 .hero-benefits li { padding: 10px 20px; background: rgba(255, 255, 255, 0.1); border-radius: 6px; backdrop-filter: blur(10px); font-size: 0.95rem; }
 .cta-button { display: inline-block; padding: 14px 35px; font-size: 1rem; font-weight: 600; border-radius: 6px; transition: all 0.3s ease; cursor: pointer; text-decoration: none; border: 2px solid; text-transform: uppercase; letter-spacing: 0.5px; }
-.cta-button.primary { background: var(--accent); color: var(--primary); border-color: var(--accent); }
-.cta-button.primary:hover { background: transparent; color: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); }
+.cta-button.primary { background: var(--theme-accent); color: #ffffff; border-color: var(--theme-accent); }
+.cta-button.primary:hover { background: transparent; color: var(--theme-accent); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); }
 .cta-button.large { padding: 18px 50px; font-size: 1.1rem; }
 .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
-.benefit-card { padding: 30px; background: white; border-radius: 8px; border-left: 4px solid var(--accent); transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+.benefit-card { padding: 30px; background: white; border-radius: 8px; border-left: 4px solid var(--theme-accent); transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
 .benefit-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); }
 .benefit-icon { font-size: 2.8rem; margin-bottom: 15px; }
-.benefit-card h3 { color: var(--primary); margin-bottom: 10px; }
+.benefit-card h3 { color: var(--theme-primary); margin-bottom: 10px; }
 .benefit-card p { font-size: 0.95rem; color: #666; line-height: 1.6; }
 .testimonials-carousel { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
-.testimonial-card { padding: 30px; background: white; border-left: 5px solid var(--accent); border-radius: 8px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); transition: all 0.3s ease; }
+.testimonial-card { padding: 30px; background: white; border-left: 5px solid var(--theme-accent); border-radius: 8px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); transition: all 0.3s ease; }
 .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); }
 .testimonial-quote { font-size: 1.05rem; font-style: italic; line-height: 1.8; margin-bottom: 20px; color: #333; }
 .testimonial-meta { border-top: 1px solid rgba(0, 0, 0, 0.1); padding-top: 15px; }
-.testimonial-author { font-weight: 600; font-size: 0.95rem; color: var(--primary); }
-.testimonial-result { color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-top: 5px; }
+.testimonial-author { font-weight: 600; font-size: 0.95rem; color: var(--theme-primary); }
+.testimonial-result { color: var(--theme-accent); font-weight: 600; font-size: 0.85rem; margin-top: 5px; }
 .trust-section { margin-top: 50px; text-align: center; padding-top: 40px; border-top: 1px solid #e0e0e0; }
 .trust-label { font-size: 0.9rem; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
 .trust-badges { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-.badge { padding: 12px 20px; background: white; border: 2px solid var(--accent); border-radius: 6px; font-size: 0.9rem; color: var(--primary); font-weight: 500; }
+.badge { padding: 12px 20px; background: white; border: 2px solid var(--theme-accent); border-radius: 6px; font-size: 0.9rem; color: var(--theme-primary); font-weight: 500; }
 .faq-list { margin-top: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
 .faq-item { margin-bottom: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); }
-.faq-question { width: 100%; padding: 20px; background: white; border: none; text-align: left; font-size: 1.05rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--primary); transition: all 0.3s ease; }
-.faq-question:hover { background: var(--accent); color: white; }
+.faq-question { width: 100%; padding: 20px; background: white; border: none; text-align: left; font-size: 1.05rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--theme-primary); transition: all 0.3s ease; }
+.faq-question:hover { background: var(--theme-accent); color: white; }
 .faq-toggle { font-size: 1.5rem; transition: transform 0.3s ease; }
 .faq-item.open .faq-toggle { transform: rotate(45deg); }
 .faq-answer { display: none; padding: 20px; background: #f9f9f9; color: #666; line-height: 1.8; }
 .faq-item.open .faq-answer { display: block; }
-.cta-section { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; text-align: center; padding: 80px 20px; border-top: 3px solid var(--accent); }
-.cta-section h2 { color: white; border: none; }
-.cta-body { font-size: 1.1rem; max-width: 600px; margin: 20px auto 30px; line-height: 1.8; }
-.guarantee-box { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 8px; margin-top: 30px; font-size: 0.95rem; backdrop-filter: blur(10px); }
+.cta-section { background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%); color: #ffffff; text-align: center; padding: 80px 20px; border-top: 3px solid var(--theme-accent); }
+.cta-section h2 { color: #ffffff; border: none; }
+.cta-body { font-size: 1.1rem; max-width: 600px; margin: 20px auto 30px; line-height: 1.8; color: rgba(255,255,255,0.92); }
+.guarantee-box { background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.3); padding: 20px; border-radius: 8px; margin-top: 30px; font-size: 0.95rem; backdrop-filter: blur(10px); color: rgba(255,255,255,0.88); }
 .site-footer { background: #f5f5f5; padding: 40px 20px; text-align: center; color: #666; font-size: 0.9rem; }
-.site-footer strong { color: var(--primary); }
+.site-footer strong { color: var(--theme-primary); }
 @media (max-width: 768px) { section { padding: 60px 0; } h1 { font-size: 1.8rem; } h2 { font-size: 1.5rem; } .hero { padding: 80px 0; } .hero-benefits { flex-direction: column; align-items: flex-start; } .benefits-grid, .testimonials-carousel { grid-template-columns: 1fr; } .cta-section { padding: 60px 20px; } }
